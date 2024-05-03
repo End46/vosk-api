@@ -57,7 +57,7 @@ try:
         args.samplerate = int(device_info["default_samplerate"])
         
     if args.model is None:
-        model = Model(lang="en-us")
+        model = Model("vosk-model-small-es-0.42")
     else:
         model = Model(lang=args.model)
 

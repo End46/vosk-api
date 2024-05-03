@@ -9,7 +9,8 @@ SAMPLE_RATE = 16000
 
 SetLogLevel(0)
 
-model = Model(lang="en-us")
+#model = Model(lang="en-us")
+model = Model("vosk-model-small-es-0.42")
 rec = KaldiRecognizer(model, SAMPLE_RATE)
 
 with subprocess.Popen(["ffmpeg", "-loglevel", "quiet", "-i",
